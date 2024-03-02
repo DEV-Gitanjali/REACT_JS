@@ -16,9 +16,10 @@
 
 
 // React fragment
-const jsxHeading = <React.Fragment>
+// const jsxHeading = <React.Fragment>
 
-    <h1 classname="head">Hello Jsx</h1>
-    <p>this is created using jsx</p>
-</React.Fragment>
-    ReactDOM.createRoot(document.getElementById("root")).render(jsxHeading);
+//     <h1 classname="head">Hello Jsx</h1>
+//     <p>this is created using jsx</p>
+// </React.Fragment>
+//     ReactDOM.createRoot(document.getElementById("root")).render(jsxHeading);
+
