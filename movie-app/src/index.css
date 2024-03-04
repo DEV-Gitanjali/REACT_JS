@@ -106,3 +106,18 @@ code {
   position: absolute;
   left: 50;
 }
+
+.footer .str.btn{
+width: 7px;
+height: 7px;
+}
+
+.footer button{
+  font-size: 15px;
+  padding: 7px 10px;
+  text-shadow: none;
+  border-radius: 30px;
+  border: none;
+  font-weight: 600;
+}
+
