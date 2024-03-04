@@ -70,5 +70,39 @@ code {
    padding: 0 20px;
    font-weight: 500;
    color: rgb(0, 75, 0);
-   
+
+}
+
+.footer{
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.footer .rating{
+  font-size: 20px;
+  font-weight: 600;
+  flex: 1;
+}
+
+.footer .stars{
+  width: 20px;
+  height: 20px;
+}
+
+.footer .star-dis{
+  font-size: 20px;
+  font-weight: 600;
+  flex: 1;
+  position: relative;
+}
+
+.footer.starCount{
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  left: 50;
 }
