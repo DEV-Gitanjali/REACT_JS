@@ -1,4 +1,5 @@
 import MovieCard from "./Moviecard";
+import index from "./index.css";
 
 function App() {
   return (
