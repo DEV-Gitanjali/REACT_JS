@@ -121,3 +121,21 @@ height: 7px;
   font-weight: 600;
 }
 
+.favorite-btn{
+  background-color: #bc16dd;
+  color: #fff;
+  margin: 5px;
+}
+
+.cart-btn{
+  background-color: #251bb1;
+  color: #fff;
+  margin: 5px;
+}
+
+.unfavorite-btn{
+  background-color: #db2828;
+  color: #fff;
+  text-shadow: none;
+  margin: 5px;
+}
