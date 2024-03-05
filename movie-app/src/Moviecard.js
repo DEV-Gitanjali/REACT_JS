@@ -3,7 +3,24 @@ import { Component } from "react";
 
 
 class MovieCard extends Component{
+
+    constructor(){
+        super();
+        this.state={
+            title:"The Avengers" ,
+            plot:"supernatural powers shown in the movie",
+            price:199,
+            rating:8.9,
+        }
+        // this.addStars = this.addStars.bind(this);
+    }
+
+    addStars=()=> {
+        console.log("this: " , this);
+    }
     render(){
+        const {title,plot,price,rating}  = this.state;
+          
         return(
             <div className="main">
                 <div class="movie-card">
@@ -12,7 +29,7 @@ class MovieCard extends Component{
                     </div>
 
                     <div className="right">
-                        <div className="title">The Avengers</div>
+                        <div className="title">{this.state.title}</div>
                         <div className="plot">Supernatural powers shown in the movie.</div>
                         <div className="price">Rs.199</div>
 
@@ -22,8 +39,8 @@ class MovieCard extends Component{
 
                                 <img className="str-btn" alt="decrease" src="https://cdn-icons-png.flaticon.com/128/43/43625.png"/>
                               <img alt="img" src="https://cdn-icons-png.flaticon.com/128/149/149763.png" className="stars"/>
-                                <img className="str-btn" alt="increase" src="https://cdn-icons-png.flaticon.com/128/2952/2952084.png"/>
-                                <span>0</span>
+                                <img className="str-btn" alt="increase" src="https://cdn-icons-png.flaticon.com/128/2952/2952084.png" onClick={this.addStars.bind(this)}/>
+                                <span className="satrtCount">0</span>
                             </div>
                             <button className="favorite-btn">Favorite</button>
                             <button className="cart-btn">Add to cart</button>
