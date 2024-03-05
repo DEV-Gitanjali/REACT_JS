@@ -11,15 +11,31 @@ class MovieCard extends Component{
             plot:"supernatural powers shown in the movie",
             price:199,
             rating:8.9,
+            stars:0
+
         }
         // this.addStars = this.addStars.bind(this);
     }
 
     addStars=()=> {
-        console.log("this: " , this);
+      //forms 
+        // this.setState({
+        //     stars:this.state.stars +0.5
+        // });
+
+        // second form 
+        this .setState((prevState)=>{
+            return{
+             stars:prevState.stars + 0.5
+            }
+        });
+
+        
+        // this.state.stars +=0.5;
+        // console.log("this.state.stars " , this.state.stars);
     }
     render(){
-        const {title,plot,price,rating}  = this.state;
+        const {title,plot,price,rating,stars}  = this.state;
           
         return(
             <div className="main">
@@ -40,7 +56,7 @@ class MovieCard extends Component{
                                 <img className="str-btn" alt="decrease" src="https://cdn-icons-png.flaticon.com/128/43/43625.png"/>
                               <img alt="img" src="https://cdn-icons-png.flaticon.com/128/149/149763.png" className="stars"/>
                                 <img className="str-btn" alt="increase" src="https://cdn-icons-png.flaticon.com/128/2952/2952084.png" onClick={this.addStars.bind(this)}/>
-                                <span className="satrtCount">0</span>
+                                <span className="satrtCount">0.5</span>
                             </div>
                             <button className="favorite-btn">Favorite</button>
                             <button className="cart-btn">Add to cart</button>
