@@ -11,28 +11,42 @@ class MovieCard extends Component{
             plot:"supernatural powers shown in the movie",
             price:199,
             rating:8.9,
-            stars:0
-
+            stars:0,
+            fav : true
         }
         // this.addStars = this.addStars.bind(this);
     }
 
     addStars=()=> {
-      //forms 
-        // this.setState({
-        //     stars:this.state.stars +0.5
-        // });
 
-        // second form 
-        this .setState((prevState)=>{
-            return{
-             stars:prevState.stars + 0.5
-            }
+        if(this.state.stars >=5){
+            return;
+        }
+      //forms 
+
+        this.setState({
+            stars:this.state.stars +0.5
         });
+
+        console.log("stars:", this.state.stars);
+        // second form 
+        // this .setState((prevState)=>{
+        //     return{
+        //      stars:prevState.stars + 0.5
+        //     }
+        // });
 
         
         // this.state.stars +=0.5;
         // console.log("this.state.stars " , this.state.stars);
+
+
+    }
+
+    handleFav=()=>{
+        this.setState({
+            fav:! this.state.fav
+        })
     }
     render(){
         const {title,plot,price,rating,stars}  = this.state;
@@ -56,9 +70,21 @@ class MovieCard extends Component{
                                 <img className="str-btn" alt="decrease" src="https://cdn-icons-png.flaticon.com/128/43/43625.png"/>
                               <img alt="img" src="https://cdn-icons-png.flaticon.com/128/149/149763.png" className="stars"/>
                                 <img className="str-btn" alt="increase" src="https://cdn-icons-png.flaticon.com/128/2952/2952084.png" onClick={this.addStars.bind(this)}/>
-                                <span className="satrtCount">0.5</span>
+                                <span className="satrtCount">stars</span>
                             </div>
-                            <button className="favorite-btn">Favorite</button>
+
+                           
+                            {/* { fav ? (
+  <button className="unfavorite-btn" onClick={this.handleFav}>un-favorite</button>
+) : (
+  <button className="favorite-btn" onClick={this.handleFav}>Favorite</button>
+) } */}
+
+  <button className={fav ? "unfavorite-btn":"favorite-btn"}
+  oonclick={this.handleFav}>{fav? "unfavorite" : "favorite"}</button>
+
+
+
                             <button className="cart-btn">Add to cart</button>
                         </div>
 
